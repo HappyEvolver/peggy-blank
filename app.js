@@ -26,6 +26,30 @@ app.get("/", function(req, res) {
   });
 });
 
+// route for page two
+app.get("/zopim", function(req, res) {
+  fs.readFile(__dirname + '/zopim.html',
+  function (err, data) {
+    if (err) {
+      return res.send(500, 'Error loading zopim.html');
+    }
+    res.set('Content-Type', 'text/html');
+    res.send(200, data);
+  });
+});
+
+// route for page three
+app.get("/purechat", function(req, res) {
+  fs.readFile(__dirname + '/purechat.html',
+  function (err, data) {
+    if (err) {
+      return res.send(500, 'Error loading purechat.html');
+    }
+    res.set('Content-Type', 'text/html');
+    res.send(200, data);
+  });
+});
+
 // Now use 'http' to wrap the express wrapper; this is needed so
 // that 'io' binds to an instance of the correct type... really!
 var http = require("http");
