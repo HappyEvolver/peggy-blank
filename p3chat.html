@@ -5,6 +5,7 @@
         <meta charset="utf-8" />
         <title>Pegasus P3Chat Demo</title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="/css/main.css" rel="stylesheet">
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     </head>
     <body>
@@ -17,5 +18,17 @@
         <div class='container'>
             <!--<h1>P3Chat Demo</h1>-->
         </div>
+        <script>
+          var p3chat = p3chat || [];
+          p3chat.push(['_setAccount', '072157893']);
+          p3chat.push(['_trackPage']);
+          (function (d, t, id) {
+            if (d.getElementById(id)) return;
+            var e = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            e.src = "//p3chat.com/dist/p3.js"; e.id = id;
+            s.parentNode.insertBefore(e, s);
+          }(document, 'script', 'p3chat-snippet'));
+        </script>
     </body>
 </html>
